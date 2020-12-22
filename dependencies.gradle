@@ -25,6 +25,7 @@ ext {
 
     versions = [
             androidGradlePlugin: '4.1.1',
+            bintrayPlugin      : '1.8.5',
 
             // Kotlin
             kotlin             : '1.4.21',
@@ -42,6 +43,7 @@ ext {
     buildPlugins = [
             androidGradlePlugin: "com.android.tools.build:gradle:$versions.androidGradlePlugin",
             kotlinGradlePlugin : "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin",
+            bintrayPlugin      : "com.jfrog.bintray.gradle:gradle-bintray-plugin:$versions.bintrayPlugin",
     ]
 
     libraries = [

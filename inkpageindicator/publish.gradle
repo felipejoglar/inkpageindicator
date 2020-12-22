@@ -1,0 +1,42 @@
+apply plugin: 'com.jfrog.bintray'
+
+group 'com.fjoglar.inkpageindicator'
+version libraryVersionName
+
+project.ext {
+    mavGitUrl = 'https://github.com/fjoglar/InkPageIndicator.git'
+    mavProjectName = 'inkpageindicator'
+    mavLibraryLicenses = ["Apache-2.0": 'http://www.apache.org/licenses/LICENSE-2.0.txt']
+    mavLibraryDescription = "An ink inspired widget for indicating pages in a ViewPager2"
+    mavPublishToMavenLocal = true
+    mavSiteUrl = 'https://github.com/fjoglar/InkPageIndicator'
+}
+
+def properties = new Properties()
+// properties.load(new FileInputStream("local.properties"))
+
+bintray {
+    user = System.getenv("bintrayUser") ?: properties.getProperty("bintray.user")
+    key = System.getenv("bintrayApiKey") ?: properties.getProperty("bintray.apikey")
+    
+    publications = ['mavenPublish']
+    configurations = ['archives']
+    override = true
+
+    pkg {
+        repo = 'maven'
+        name = 'inkpageindicator'
+        description = "An ink inspired widget for indicating pages in a ViewPager2"
+        publicDownloadNumbers = true
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/fjoglar/InkPageIndicator.git'
+        version {
+            name = libraryVersionName
+            desc = "Version ${libraryVersionName}"
+            released = new Date()
+            vcsTag = libraryVersionName
+        }
+    }
+}
+
+apply from: 'https://raw.githubusercontent.com/sky-uk/gradle-maven-plugin/master/gradle-mavenizer.gradle'
