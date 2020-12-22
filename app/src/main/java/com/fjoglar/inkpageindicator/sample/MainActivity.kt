@@ -42,11 +42,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun getPages(pagesCount: Int): List<Fragment> {
-        val pages = mutableListOf<Fragment>()
-        for (i in 1..pagesCount) {
-            pages.add(PageFragment.newInstance(i))
-        }
-        return pages
+    private fun getPages(pageCount: Int): List<Fragment> {
+        return (1..pageCount).map { PageFragment.newInstance(it) }
     }
 }
