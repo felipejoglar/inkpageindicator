@@ -1,12 +1,13 @@
 # InkPageIndicator
 [![Build](https://github.com/fjoglar/InkPageIndicator/workflows/Build/badge.svg)](https://github.com/fjoglar/InkPageIndicator/actions?query=workflow%3A%22Build%22)
 [![Download](https://api.bintray.com/packages/fjoglar/maven/inkpageindicator/images/download.svg?version=1.0.0)](https://bintray.com/fjoglar/maven/inkpageindicator/1.0.0/link)
-[![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg?style=flat)](https://developer.android.com/studio/releases/platforms#4.4)
+[![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)](https://developer.android.com/studio/releases/platforms#5.0)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/fjoglar/InkPageIndicator/blob/master/LICENSE)
 
 An ink inspired widget for indicating pages in a ViewPager2.
 
-InkPageIndicator from [Plaid](https://github.com/nickbutcher/plaid) by [@nickbutcher](https://github.com/nickbutcher). Migrated to 100% Kotlin & backported to API 19+ (4.4+)
+InkPageIndicator from [Plaid](https://github.com/nickbutcher/plaid) by [@nickbutcher](https://github.com/nickbutcher).
+Migrated to 100% Kotlin.
 
 ## Installation
 **Using Gradle**
