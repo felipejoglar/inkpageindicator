@@ -24,7 +24,7 @@ bintray {
     override = true
 
     pkg {
-        repo = 'maven'
+        repo = 'android'
         name = 'inkpageindicator'
         description = "An ink inspired widget for indicating pages in a ViewPager2"
         publicDownloadNumbers = true
