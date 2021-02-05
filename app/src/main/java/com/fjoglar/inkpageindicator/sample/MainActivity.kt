@@ -22,6 +22,7 @@ import androidx.fragment.app.Fragment
 import com.fjoglar.inkpageindicator.sample.databinding.ActivityMainBinding
 import com.fjoglar.inkpageindicator.sample.pages.PageAdapter
 import com.fjoglar.inkpageindicator.sample.pages.PageFragment
+import com.fjoglar.inkpageindicator.sample.settings.SettingsDialogFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,6 +34,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setupViewPager()
+        binding.btnSettings.setOnClickListener {
+            openSettings()
+        }
     }
 
     private fun setupViewPager() {
@@ -40,6 +44,10 @@ class MainActivity : AppCompatActivity() {
             viewPager.adapter = PageAdapter(getPages(5), supportFragmentManager, lifecycle)
             inkPageIndicator.setViewPager(viewPager)
         }
+    }
+
+    private fun openSettings() {
+        SettingsDialogFragment().show(supportFragmentManager)
     }
 
     private fun getPages(pageCount: Int): List<Fragment> {
